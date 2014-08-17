@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<servlet>
+		<servlet-name>query</servlet-name>
+		<servlet-class>edu.dartmouth.cs.whosupfor.server.QueryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>query</servlet-name>
+		<url-pattern>/query.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>get_event_history</servlet-name>
+		<servlet-class>edu.dartmouth.cs.whosupfor.server.GetEventHistoryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>get_event_history</servlet-name>
+		<url-pattern>/get_event_history.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>get_user_history</servlet-name>
+		<servlet-class>edu.dartmouth.cs.whosupfor.server.GetUserHistoryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>get_user_history</servlet-name>
+		<url-pattern>/get_user_history.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>post</servlet-name>
+		<servlet-class>edu.dartmouth.cs.whosupfor.server.PostServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>post</servlet-name>
+		<url-pattern>/post.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>send_event_update_msg</servlet-name>
+		<servlet-class>edu.dartmouth.cs.whosupfor.server.SendEventUpdateMessageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>send_event_update_msg</servlet-name>
+		<url-pattern>/send_event_update_msg.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>send_user_update_msg</servlet-name>
+		<servlet-class>edu.dartmouth.cs.whosupfor.server.SendUserUpdateMessageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>send_user_update_msg</servlet-name>
+		<url-pattern>/send_user_update_msg.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>register</servlet-name>
+		<servlet-class>edu.dartmouth.cs.whosupfor.server.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>register</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>main.jsp</welcome-file>
+	</welcome-file-list>
+
+</web-app>
